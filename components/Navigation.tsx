@@ -25,13 +25,15 @@ const Navigation = () => {
       return () => clearTimeout(timeout);
     }
   }, [isRouting]);
+
   return (
     <div
       style={{ left: "20%" }}
       className="absolute z-[50] -bottom-20 w-[50%] md:w-[20%] max-h-[150px] rounded-full flex justify-between items-center border bg-black border-white px-4 py-7"
     >
-
-      {isRouting && <Transition />}
+      {/* Inline loading transition */}
+      {isRouting && <div className="text-white">Loading...</div>}
+      
       {NavLinks.map((nav) => (
         <Link key={nav.name} href={nav.link} className="mb-16 pl-4 min-w-[20%]">
           <nav.icon
@@ -46,4 +48,5 @@ const Navigation = () => {
 };
 
 export default Navigation;
+
 
