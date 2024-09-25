@@ -8,7 +8,7 @@ const Navbar = () => {
       <div className="flex flex-row gap-3 items-center">
         <div className="relative">
           { <Image
-            src="/me.jpg"
+            src="/me.png"
             alt="logo"
             width={40}
             height={40}
